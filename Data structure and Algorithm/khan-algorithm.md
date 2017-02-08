@@ -1,4 +1,4 @@
-# 칸아카데미 알고리즘 강의
+# Khan Academy
 https://ko.khanacademy.org/computing/computer-science/algorithms
 
 ## 이진 검색
