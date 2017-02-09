@@ -1,4 +1,4 @@
-# 소셜 코딩으로 이끄는 Github 실천 기술(오오츠카 히로키) / 제이펍 출판사
+# Git
 
 ## git 기본 사용법
 ```shell
@@ -13,6 +13,10 @@ git add 파일명
 
 git commit -m '첫 커밋'
 # Commit
+
+git fetch branch-A
+# fetching remote branches 
+# used typically for Fetch and Merge instead of Pull
 
 git log --pretty=short
 # Short 1line logs
