@@ -38,11 +38,10 @@ File.open('./xml_files/Elegran_adverts.xml', 'w') do |file|
 end
 ```
 - Recursive method 
+
 ** This is useful when iterating through hash to create xml files in specific schemas
 
-'''ruby
-
-
+```ruby
 def generate_xml(data, parent = false, opt = {})
   return if data.to_s.empty?
   return unless data.is_a?(Hash)
@@ -81,4 +80,4 @@ def generate_xml(data, parent = false, opt = {})
     end
   }
 end
-'''
+```
