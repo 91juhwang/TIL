@@ -39,7 +39,7 @@ end
 ```
 - Recursive method 
 
-** This is useful when iterating through hash to create xml files in specific schemas
+..* This is useful when iterating through hash to create xml files in specific schemas
 
 ```ruby
 def generate_xml(data, parent = false, opt = {})
