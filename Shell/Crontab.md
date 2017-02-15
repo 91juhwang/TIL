@@ -4,7 +4,7 @@
 
 - Edit the cronjob by running the below command (MacOS)
   * `sudo su -` - Become a root
-  * `crontab -u username -e` - Open the crontab for username
+  * `crontab -u username -e` - Open the crontab for the username
   * write commands and save the file
   * `crontab -u username -l` - Check the cronjob list for the username
 
@@ -23,6 +23,9 @@
 
 - List the cron jobs
   * `crontab -l`
+
+- Mail the log
+  * `MAILTO=hello.junsuk@gmail.com` - on top of the script 
 
 - Reference
   * [http://www.nncron.ru/help/EN/working/cron-format.html](http://www.nncron.ru/help/EN/working/cron-format.html)
