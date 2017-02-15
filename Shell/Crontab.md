@@ -2,8 +2,11 @@
 
 ## Instructions & Commands
 
-- Edit the cronjob by running the below command
-  * `env crontab -e`
+- Edit the cronjob by running the below command (MacOS)
+  * `sudo su -` - Become a root
+  * `crontab -u username -e` - Open the crontab for username
+  * write commands and save the file
+  * `crontab -u username -l` - Check the cronjob list for the username
 
 - Syntax
   * [timing sequence] commandToRun
