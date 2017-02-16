@@ -27,6 +27,8 @@
 - Mail the log
   * `MAILTO=hello.junsuk@gmail.com` - on top of the script 
 
+- Setup RVM cron to run ruby scripts for RVM Environments
+
 - Reference
   * [http://www.nncron.ru/help/EN/working/cron-format.html](http://www.nncron.ru/help/EN/working/cron-format.html)
 
