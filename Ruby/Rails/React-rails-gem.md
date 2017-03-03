@@ -4,7 +4,7 @@
 
 - `gem 'react-rails'`
 - bundle
-- `rails g react:install
+- `rails g react:install`
 
 ## Usage
 
