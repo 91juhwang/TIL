@@ -14,3 +14,6 @@ IMPORTANT: Views should only display already computed values. **
 ## Instructions & Tips
 
 - Use PORO
+  * Plain Old Ruby Objects - Extract logics out of the view or presenter logics and create a new presenter. 
+  
+http://blog.steveklabnik.com/posts/2011-09-06-the-secret-to-rails-oo-design

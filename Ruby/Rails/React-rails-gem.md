@@ -10,7 +10,7 @@
 
 So I went and did the research, talked to senior developers to find out the best practices. 
 Use Object Views.
-IMPORTANT: Views should only display already computed values. **
+IMPORTANT:** Views should only display already computed values
 
 ## Troubles
 
