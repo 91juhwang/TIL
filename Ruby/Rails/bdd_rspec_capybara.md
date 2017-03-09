@@ -17,6 +17,7 @@
   > * Fill in body
   > * Click a 'create article' button
   > 
+  >
   > Expectations:
   > * Article has been created
   > * Redirect to articles path
