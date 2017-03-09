@@ -44,3 +44,35 @@
   3. Run test and build each failure one by one to make it pass
   4. Repeat 3 until all feature passes
   5. Write next feature tests and merge the finished feature
+
+## Guard
+
+Implementing automated testing using guard is very useful. 
+
+#### Installation & Configuration 
+```ruby
+gem `guard`
+gem `guard-rspec`
+gem `cucumber
+```
+then run 
+
+  * `bundle install`
+  * `bundle binstubs guard`
+  * `guard init`
+
+If I am building with Capybara/Rspec, Features that I build is going to be inside the features folder, which `Guard` is not automatically watching.
+Therefore Make changes to the `Guardfile` above `watch rails.controller` line
+```ruby
+  watch(%r{^app/controllers/(.+)_(controller)\.rb$}) { 'spec/features' }
+  watch(%r{^app/models/(.+)\.rb$}) { 'spec/features' }
+```
+also add these as well to run the whole specs whenvever routes or views change. 
+```ruby
+  # Rails config changes
+  watch(rails.routes)          { 'spec' } # run the whole spec folder whenever the routing changes
+
+  # Capybara features specs
+  watch(rails.view_dirs)     { 'spec/features' } # run the spec/features folder whenever the view changes
+```
+
