@@ -17,6 +17,7 @@
   > * Fill in body
   > * Click a 'create article' button
   > 
+  >
   > Expectations:
   > * Article has been created
   > * Redirect to articles path
@@ -49,7 +50,7 @@
 
 Implementing automated testing using guard is very useful. 
 
-#### Installation & Configuration 
+### Installation & Configuration 
 ```ruby
 gem `guard`
 gem `guard-rspec`
