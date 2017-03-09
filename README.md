@@ -15,3 +15,5 @@ Inspired and learned from [thoughtbot TIL](https://github.com/thoughtbot/til), t
 
 ## Favorites & Specialties
 - [Rails](https://github.com/91juhwang/TIL/tree/master/Ruby/Rails)
+- [CodingChallenge](https://github.com/91juhwang/TIL/tree/master/CodingChallenges)
+- [JavaScript](https://github.com/91juhwang/TIL/tree/master/JavaScript)
