@@ -77,3 +77,14 @@ also add these as well to run the whole specs whenvever routes or views change.
   watch(rails.view_dirs)     { 'spec/features' } # run the spec/features folder whenever the view changes
 ```
 
+### Implementing user session using Warden provided by Devise
+In order to use a method like `login_as` to mock a logged in user, we must implement Warden provided by Devise. 
+You would have to manually write each steps for logging in if not using Devise.
+
+  1. In the `rails_helper`
+  2. `include Warden::Test::Helpers`
+  3. Write tests
+
+### Tips
+
+  * In order to use `click_link` you must visit `_path` first. 
