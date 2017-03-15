@@ -12,6 +12,8 @@ var triple =  function(x) {
 var waffle = triple
 waffle(30)
 ```
+
+### .Filter
 One of the most used higher order function is `.filter`. see the below example.
 
 #### Example: 
@@ -45,3 +47,38 @@ var isHuman = function(human) {
 var humans2 = animals.filter(function(human))
 // returns the same result, but much more clean and decoupled two logics
 ```
+
+### .Map
+```javascript
+// returns names
+var names = animals.map(function(animal) {
+  return animal.map
+})
+// Using es6
+var nameEs6 = animals.map((x) => x.name )
+```
+
+### .Reduce
+.reduce takes a callback function as a first argument, and the order for the second argument.
+#### Example:
+```javascript
+var orders = [
+  { amount: 300 },
+  { amount: 100 },
+  { amount: 200 },
+  { amount: 400 },
+  { amount: 500 }
+]
+var total = orders.reduce(function(accu, order) => 
+  accu + order.amount
+}, 0)
+```
+The `sum` takes the initial value(accumulator) from the second argument of the `reduce` function, and loops through the order and adds `order.amount` to get the total amount. It's like Ruby's method .reduce.
+```ruby
+# x is the accumulator, and y is the value
+# s is the x, t is the y
+# y + x = ts = new x
+# returns 'gnirts'
+'string'.chars.reduce { |x, y| y + x }
+```
+
