@@ -1,9 +1,9 @@
 # .chars returns an array of each letters
 # and we use .sort_by, which map and return values using a following block,
 # which the block contains the value and the index from .with_index method.
-# and we sort_by the last index and returns the .join values
+# and we sort_by the last index and returns the .join value
 def reverse_string(str) 
-  str.chars.sort_by.with_index { |x, y| -y }.join
+  str.chars.sort_by.with_index { |_x, y| -y }.join
 end
 puts reverse_string('Programming is so fun!!')
 
@@ -14,7 +14,7 @@ puts reverse_string('Programming is so fun!!')
 # then, x = rts, y = i, y + x = irts, which again becomes a new value for x
 # x = irts, y = n, y + x = nirts, which again become a new value for x
 def reverse_str(str)
-  str.chars.reduce { |x, y| y + x }
+  str.chars.reduce { |acc, elem| elem + acc }
 end
 puts reverse_str('Programming is so fun!!')
 
@@ -27,6 +27,6 @@ puts second_smallest([42,8,6,5,4,23,2,6,124,34])
 
 # without using builtin #sort method
 def second_element(arry)
-  arry.reduce { |x,y| x - y ? x : y }
+  arry.reduce { |x, y| x - y ? x : y }
 end
 puts second_element([42,8,6,5,4,23,2,6,124,34])
