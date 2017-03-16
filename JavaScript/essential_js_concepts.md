@@ -1,5 +1,6 @@
 # JavaScript Fundamentals
 
+[Tutorial link](https://reactjs.co/#basic-preface)
 ## Higher Order Functions
 
 Functions are values. Functions can be assigned to variables. 
@@ -82,3 +83,9 @@ The `sum` takes the initial value(accumulator) from the second argument of the `
 'string'.chars.reduce { |x, y| y + x }
 ```
 
+### .reduce advanced!!!
+  * [Link to the advanced .reduce lesson](https://www.youtube.com/watch?v=1DMolJ2FrNY)
+
+### Closures
+
+  
