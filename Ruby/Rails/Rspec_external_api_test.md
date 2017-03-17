@@ -1,6 +1,7 @@
 # RSpec
 
 ## Testing external apis
+using `webmock`
 
 ```ruby
 before do
