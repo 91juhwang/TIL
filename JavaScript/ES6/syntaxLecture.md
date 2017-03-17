@@ -110,3 +110,172 @@ function letFunc(){
 }
 ```
 
+## const
+
+  * readonly
+  * const follows the scoping
+  * useful when declaring unchanging variables such as API_KEY and such.
+
+## Shorthand Properties
+Useful to build an object on top of another. See the below example for more clear understanding.
+
+```javascript
+let firstName = "james"
+let lastName = "hwang"
+
+let person = { firstName, lastName }
+console.log(person) // logs out an object with defined properties
+
+let mascot = "wolf"
+let team = { person, mascot }
+
+console.log(team) // logs out team object with person object and also mascot. 
+```
+
+## Object Enhancements
+If you declare 
+```javascript
+let color = 'red'
+let speed = 10
+
+// ES6
+var car = {color, speed}
+
+// ES5
+var car = {color:color, speed:speed};
+
+// both returns the same result
+console.log(car.color); // "red"
+console.log(car.speed); // 10
+
+// Also works with functions as well
+// ES5
+var car = {
+  color,
+  speed,
+  go: function(){
+    console.log("vroom");
+  }
+};
+// ES6
+var car = {
+  color,
+  speed,
+  go(){
+    console.log("vroom");
+  }
+};
+car.go(); // "vroom"
+```
+
+## Spread Operator
+Instead of typing explicitly, `...` spreads out the individual element in the array to the arguments. For example:
+```javascript
+let first = [ 1, 2, 3];
+let second = [ 1, 2, 3];
+first.push(second);
+console.log(first); // [ 1, 2, 3, [ 4, 5, 6] ]
+
+// using the spread operator
+first.push(...second);
+console.log(first); // [1, 2, 3, 4, 5, 6]
+
+// using it in a method
+function addThreeThings( a, b, c){
+  let result = a + b + c;
+  console.log(result); // 6
+}
+addThreeThings(...first); // 6
+```
+
+## Template Literals
+Instead of concatenating strings with `'blah' + 'world'`, now it supports one quote concatenation with whitespace supports using the `${}`
+```javascript
+var salutation = "Hello";
+var greeting = `${salutation} , World`; // Hello World
+```
+
+## Destructing Assignmnet
+```javascript
+function generateObj() {
+  return {
+    color: "blue",
+    name: "John",
+    state: "New York",
+    position: "Forward"
+  }
+}
+var {name, state} = generateObj();
+```
+When you have array, and only one specific position elements, you can do :
+
+```javascript
+var [first,,,,fifth] = ["red", "yellow", "green", "blue", "orange"]
+
+console.log(first); // red
+console.log(fifth); // orange
+```
+Another cool and awesome example for destructing is :
+```javascript
+var people = [
+  {
+    "firstName": "james",
+    "lastName": "den",
+    "phone": "1-637-627-2810",
+    "email": "dsdfsfdsf@te.co.uk",
+    "address": "ssss Aliquet, Street"
+  },
+  {
+    "firstName": "Skyler",
+    "lastName": "Carroll",
+    "phone": "1-429-754-5027",
+    "email": "Cras.vehicula.alique@diamProin.ca",
+    "address": "P.O. Box 171, 1135 Feugiat St."
+  },
+  {
+    "firstName": "Kylynn",
+    "lastName": "Madden",
+    "phone": "1-637-627-2810",
+    "email": "mollis.Duis@ante.co.uk",
+    "address": "993-6353 Aliquet, Street"
+  }
+]
+// Inside the .forEach(), () => console.log(arg) was used, but passing the destructing value(firstName) inside {},
+//it becomes .forEach(({firstName}) => console.log(firstName))
+people.forEach(({firstName})=> console.log(firstName)) // logs firstName of each object from each elements in the array
+
+// You can also create a function!!!
+// Skils the first element by passing a comma [,]
+// finds the second element and name it Skyler [, Skyler]
+var [,Skyler] = people;
+
+// create a function to log email only by passing a email destruction
+function logEmail({email}){
+  console.log(email);
+}
+
+// Passes Skyler, which is the second element of the array named people.
+// second object is passed to logEmail function, but destructing email variable is passed
+logEmail(Skyler) // which logs Cras.vehicula.aliquet@diamProin.ca
+```
+
+## Modules!
+ES6 allows exporting modules and importing files. See below for code explanation. 
+```javascript
+// * imports all, alias is addition from the path
+import * as addition from 'math/addition';
+// you can also import specific function only.
+import { sumTwo } from 'math/addition'
+
+console.log(
+  "1 + 3",
+  addition.sumTwo(1, 3) // 4
+);
+
+console.log(
+  "1 + 3 + 4",
+  addition.sumTwo(1, 3, 4) // 8
+);
+```
+## Generator
+Generator called using *. It is useful for async 

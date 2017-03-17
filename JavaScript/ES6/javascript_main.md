@@ -1,6 +1,12 @@
 # JavaScript Fundamentals
 
-[Tutorial link](https://reactjs.co/#basic-preface)
+# Style Guide
+[Style Guide](https://github.com/feross/standard/blob/master/RULES.md#automatic-semicolon-insertion-asi)
+
+# Useful Tutorials
+[React+Redux Tutorial](https://reactjs.co/#basic-preface)
+[Promises Explanation](http://www.datchley.name/es6-promises/) 
+
 ## Higher Order Functions
 
 Functions are values. Functions can be assigned to variables. 
@@ -123,7 +129,6 @@ countDownFrom(10) // console.log from 10, 9, 8, ... until 1
 ```
 
 ### Promises
-[explanation](http://www.datchley.name/es6-promises/)
 Promises are composable unlike callback functions. When it comes async success/failure, you want something like this. 
 ```javascript
 img1.callThisIfLoadedOrWhenLoaded(function() {
