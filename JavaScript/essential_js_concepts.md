@@ -87,5 +87,4 @@ The `sum` takes the initial value(accumulator) from the second argument of the `
   * [Link to the advanced .reduce lesson](https://www.youtube.com/watch?v=1DMolJ2FrNY)
 
 ### Closures
-
-  
+The function body has accces to variables that are outside of the function. Closure allows the out of scope variables. The out of scope variable in the function is called, when the function is executed. 
