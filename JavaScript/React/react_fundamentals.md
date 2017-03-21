@@ -154,3 +154,16 @@ Handling events with React elements is very similar to handling events on DOM el
   * React events are named using camelCase, rather than lowercase.
   * With JSX you pass a function as the event handler, rather than a string.
 
+use this.bind() to bind the function
+
+
+## Lifting up states
+When you want to aggregate data from multiple children or to have two child components communicate with each other, move the state upwards so that it lives in the parent component. The parent can then pass the state back down to the children via props, so that the child components are always in sync with each other and with the parent.
+
+For example: 
+  * Consider the tic tac toe game with `Square` component and a `Board` component. 
+  * `Square` needs to render the values inside using `state()`
+  * But to render the `Sqaure.values` inside a `Board` component, the `state` cannot be stayed inside the `Square`
+  * Lift the state up to the parent, so the `Board` and `Square` component both would have it.
+
+Pulling state upwards like this is common when refactoring React components
