@@ -166,4 +166,8 @@ For example:
   * But to render the `Sqaure.values` inside a `Board` component, the `state` cannot be stayed inside the `Square`
   * Lift the state up to the parent, so the `Board` and `Square` component both would have it.
 
-Pulling state upwards like this is common when refactoring React components
+Pulling state upwards like this is common when refactoring React components.
+
+
+## HigherOrder Components
+Purpose of the Higher Order Components is to share common functionalities or information between multiple components. **Take in a component and returns a new component**

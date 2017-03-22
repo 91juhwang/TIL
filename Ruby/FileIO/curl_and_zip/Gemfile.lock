@@ -1,0 +1,19 @@
+GEM
+  remote: http://rubygems.org/
+  specs:
+    awesome_print (1.7.0)
+    curb (0.9.3)
+    json (2.0.3)
+    rubyzip (1.2.1)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  awesome_print
+  curb (~> 0.9.3)
+  json (~> 2.0, >= 2.0.2)
+  rubyzip
+
+BUNDLED WITH
+   1.13.6
