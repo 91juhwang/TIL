@@ -13,15 +13,21 @@ Purpose is to maintain the separation of concerns and decouple dependencies.
   * Namespace - to avoid naming crashes
 
   * stateless helper methods - without needing a class, bag of multiple methods. 
-
+  
 
 ## Questions
 
-  * What is the difference between a lambda, a block and a proc? [I have gotten this one at every Ruby interview I've been in]
+  * what is class?
 
-  * How do you sort an Array of objects by a particular attribute? What is a better way to do sorting with ActiveRecord?
+    * First class instance
+
+  * What is the difference between a lambda, a block and a proc? 
+
+    * Proc is a reusable block that can be passed around. It acts very similar to Lambda, but lambda checks for the arguments and throws an error if invalid numbers of arguments are passed. Proc returns nil when the arguments are incorrect. Block is a way of grouping lines of codes, statements and logics.
 
   * What are some of your favorite gems? What are their alternatives?
+
+    * pry, 
 
   * In Ruby, which is generally the better option: a recursive function or an iterative one?
 
@@ -38,4 +44,11 @@ Purpose is to maintain the separation of concerns and decouple dependencies.
   * What is Rack?
 
   * What is middleware? How does it compare to controller filters/actions?
+
+  * What is the purpose of the rakefile available in the demo directory in Ruby?
+
+    * The purpose of this simple question is to make sure a developer is familiar with a test-driven development. A beginner may not have dealt with this file yet. The rakefile is similar to the makefile in Unix, and assists with packaging and testing Rails code. It’s used by the rake utility, which ships natively with the Ruby installation.
+
+[Reference](http://www.skilledup.com/articles/ruby-on-rails-interview-questions-answers)
+
   
