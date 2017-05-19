@@ -70,6 +70,10 @@ Purpose is to maintain the separation of concerns and decouple dependencies.
 
     * Proc is a reusable block that can be passed around. It acts very similar to Lambda, but lambda checks for the arguments and throws an error if invalid numbers of arguments are passed. Proc returns nil when the arguments are incorrect. Block is a way of grouping lines of codes, statements and logics.
 
+  * What is Ruby antipattern?
+
+  * Why is strong parameter important?
+
   * What are some of your favorite gems? What are their alternatives?
 
     * pry, 
@@ -105,5 +109,62 @@ Purpose is to maintain the separation of concerns and decouple dependencies.
     * The purpose of this simple question is to make sure a developer is familiar with a test-driven development. A beginner may not have dealt with this file yet. The rakefile is similar to the makefile in Unix, and assists with packaging and testing Rails code. It’s used by the rake utility, which ships natively with the Ruby installation.
 
 [Reference](http://www.skilledup.com/articles/ruby-on-rails-interview-questions-answers)
+
+
+## Code Examples
+
+### Anti Pattern
+
+Try not to use .each!! Array examples
+
+```ruby
+# from this
+def signer_uids
+  result = []
+
+  signers.each do |signer|
+    result << signer.uids
+  end
+
+  result.flatten
+end
+
+# to this
+def signer_uids
+  signers.map {|signer| signer.uids}.flatten
+end
+
+# then to this
+def signer_uids
+  signers.map(&:uids).flatten
+end
+
+# then to this
+def signer_uids
+  signers.flat_map(&:uids)
+end
+```
+
+Array to Hashes
+
+```ruby
+# From this
+def signer_keys_and_uids
+  result = {}
+
+  signers.each do |signer|
+    result[signer.key_id] = signer.uids
+  end
+
+  result
+end
+
+# To this
+def signer_keys_and_uids
+  signers.inject({}) do |result, signer|
+    result.merge(signer.key_id => signer.uids)
+  end
+end
+```
 
   
