@@ -3,10 +3,18 @@
 [Facebook Tutorial](https://facebook.github.io/react/docs/introducing-jsx.html)
 
 ## Using Create-react-app
-It is the official starter app. 
+It is the official starter app.
   * Install create-react-app (if not installed)
   * use the command `create-react-app path_to_app`
   * run `npm start` to start the server
+
+
+## Virtual DOM
+What is virtual DOM?
+What React would is that, React would create exact copy of same DOM named React DOM(Virtual), but doing it in the behind scene.
+
+Whatever modification that was made to the node or DOM, React checks(compare) with its Virtual DOM, and update the actual DOM with just that specific node. Actual DOM is expensive to manipulate, therefore using React's virtual DOM costs much less to manipulate and update one specific node.
+
 
 ## Components
 There are 2 ways to create components. Using JSX or regular Javascript.
@@ -160,8 +168,8 @@ use this.bind() to bind the function
 ## Lifting up states
 When you want to aggregate data from multiple children or to have two child components communicate with each other, move the state upwards so that it lives in the parent component. The parent can then pass the state back down to the children via props, so that the child components are always in sync with each other and with the parent.
 
-For example: 
-  * Consider the tic tac toe game with `Square` component and a `Board` component. 
+For example:
+  * Consider the tic tac toe game with `Square` component and a `Board` component.
   * `Square` needs to render the values inside using `state()`
   * But to render the `Sqaure.values` inside a `Board` component, the `state` cannot be stayed inside the `Square`
   * Lift the state up to the parent, so the `Board` and `Square` component both would have it.
@@ -170,4 +178,67 @@ Pulling state upwards like this is common when refactoring React components.
 
 
 ## HigherOrder Components
-Purpose of the Higher Order Components is to share common functionalities or information between multiple components. **Take in a component and returns a new component**
+Purpose of the Higher Order Components is to share common functionalities or information between multiple components.
+
+<strong>Take in a component and returns a new component</strong>
+
+```jsx
+import React from 'react'
+
+const HOC = (innerComponent) => {
+  class extends React.component {
+    constructor() {
+      super();
+      this.state = {count: 0}
+    }
+
+    update() {
+      this.setState({count: this.state.count + 1})
+    }
+
+    componentWillMount() {
+      console.log("Will Mount!!)
+    }
+
+    render() {
+      return(
+        <innerComponent
+          {...this.props}
+        />
+      )
+    }
+  }
+}
+
+class App extends React.Component {
+  render() {
+    return (
+      <div>
+        <Button>button</Button>
+        <hr/>
+        <Label></Label>
+      </div>
+    )
+  }
+}
+
+const Button = (props) => {<button> {props.children} </button>}
+
+class Label extends React.Component {
+  componentWillMount(){
+    console.log("Label Component will Mount!)
+  }
+
+  render() {
+    return (
+      <div>
+        <label>{this.props.children}</label>
+      </div>
+    )
+  }
+}
+
+const LabelHOC = HOC(Label)
+```
+
+
