@@ -2,7 +2,7 @@
 
 ## Philosophy
 
-#### What is the need for DevOps?
+#### 1) What is the need for DevOps?
 
 Short answer: Fast and safer delivery of a software.
 
@@ -17,7 +17,7 @@ Short answer: Fast and safer delivery of a software.
       3. Shortened lead time between fixes
       4. Faster mean time to recovery in the event of new release crashing.
 
-#### What is the difference between Agile and DevOps?
+#### 2) What is the difference between Agile and DevOps?
 
 Agile is set of values and principles about how to produce software.
 
@@ -25,7 +25,7 @@ Agile's values and principles are used in building and developing products(Turni
 
 DevOps deliver these products to the production environment in a faster, easier, safer and a simpler repeatable way.
 
-#### What are some top DevOp tools?
+#### 3) What are some top DevOp tools?
 
   * Git: No need to argue. we all know
   * Jenkins: Continuous Integration Tool
@@ -34,4 +34,6 @@ DevOps deliver these products to the production environment in a faster, easier,
   * Nagios: Continuous Monitoring Tool
   * Docker: Containerization Tool
 
-#### How do above tools work together?
+#### 4) How do above tools work together?
+
+
